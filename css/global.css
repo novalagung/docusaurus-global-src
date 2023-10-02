@@ -31,6 +31,7 @@ blockquote {
 }
 
 .theme-code-block.language-rust,
+.theme-code-block.language-python,
 .theme-code-block.language-bash {
   color: #ffffff !important;
   font-size: 0.9em !important;
