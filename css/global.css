@@ -30,12 +30,13 @@ blockquote {
   background-color: #282a36;
 }
 
-.theme-code-block[class*="language-"] {
-  background: #FF874B !important;
+.theme-code-block.language-rust,
+.theme-code-block.language-bash {
   color: #ffffff !important;
   font-size: 0.9em !important;
   border-radius: 0 !important;
 }
+
 .theme-code-block[class*="language-"] > div > pre {
   border-radius: 0;
 }
