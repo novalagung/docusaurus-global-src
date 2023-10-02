@@ -30,9 +30,7 @@ blockquote {
   background-color: #282a36;
 }
 
-.theme-code-block.language-rust,
-.theme-code-block.language-python,
-.theme-code-block.language-bash {
+.theme-code-block[class*="language-"] {
   color: #ffffff !important;
   font-size: 0.9em !important;
   border-radius: 0 !important;
