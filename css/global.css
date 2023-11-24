@@ -124,7 +124,8 @@ blockquote {
 .theme-doc-markdown.markdown table.no-content-background tr:nth-child(2n) {
   background-color: transparent;
 }
-.theme-doc-markdown.markdown table tr td.align-center {
+.theme-doc-markdown.markdown table tr td.align-center,
+.theme-doc-markdown.markdown table tr th.align-center {
   text-align: center;
 }
 .theme-doc-markdown.markdown table tr td.vertical-align-top {
