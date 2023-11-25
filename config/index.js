@@ -96,13 +96,13 @@ function buildConfig({
             name: 'author', content: 'Noval Agung Prayogo',
           },
           {
-            name: 'og:image', content: `${url}/img/cover_media_share.png?v=2`,
+            property: 'og:image', content: `${url}/img/cover_media_share.png?v=2`,
           },
           {
-            name: 'og:type', content: 'website',
+            property: 'og:type', content: 'website',
           },
           {
-            name: 'fb:app_id', content: facebookAppID,
+            property: 'fb:app_id', content: facebookAppID,
           }
         ],
         image: `${url}/img/cover_media_share.png?v=2`,
