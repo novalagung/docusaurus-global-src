@@ -99,7 +99,7 @@ function buildConfig({
             property: 'og:image', content: `${url}/img/cover_media_share.png?v=2`,
           },
           {
-            property: 'og:type', content: 'website',
+            property: 'og:type', content: 'article',
           },
           {
             property: 'fb:app_id', content: facebookAppID,
