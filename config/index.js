@@ -14,7 +14,7 @@ function buildConfig({
   algoliaIndexName,
 }) {
   /** @type {import('@docusaurus/types').Config} */
-  return {
+  return ({
     title: title,
     tagline: tagline,
     url: url,
@@ -230,7 +230,7 @@ function buildConfig({
           breadcrumbLabelMap: {}
         },
       }),
-  }
+  })
 }
 
 module.exports = { buildConfig }
