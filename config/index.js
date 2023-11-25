@@ -162,7 +162,7 @@ function buildConfig({
           apiKey: algoliaApiKey,
           indexName: algoliaIndexName,
           contextualSearch: true,
-          searchPagePath: '', // `false`, 'search'
+          searchPagePath: 'search', // `false`, 'search'
         } : undefined,
         structuredData: {
           excludedRoutes: [ ],  
