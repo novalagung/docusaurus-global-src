@@ -110,7 +110,8 @@ function buildConfig({
           title: title,
           logo: {
             alt: `${title} - ${tagline}`,
-            src: `${url}/img/logo_small.png`,
+            src: `${url}/img/logo_small_dark.png`,
+            srcDark: `${url}/img/logo_small_light.png`,
           },
           items: [
             {
