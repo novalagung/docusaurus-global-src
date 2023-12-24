@@ -11,7 +11,7 @@ const SubStack = () => {
       src={`https://${siteConfig.organizationName}.substack.com/embed`}
       width="100%"
       height="320"
-      style={{ border: "1px solid #EEE", background: "white" }}
+      className='substack-iframe'
       frameborder="0"
       scrolling="no"
     ></iframe>
@@ -22,9 +22,13 @@ export default function ContentWrapper(props) {
   return (
     <>
       <Content {...props} />
-      <hr />
       <BrowserOnly>
-        {() => window?.location?.pathname === '/' && <SubStack />}
+        {() => window?.location?.pathname === '/' && (
+          <>
+            <hr />
+            <SubStack />
+          </>
+        )}
       </BrowserOnly>
     </>
   );
