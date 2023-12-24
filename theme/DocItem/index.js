@@ -11,15 +11,24 @@ const Ebook = () => {
     { id: 'dasarpemrogramangolang', name: 'Dasar Pemrograman Golang', src: '/img/cover ebook golang.png',  },
     { id: 'dasarpemrogramanpython', name: 'Dasar Pemrograman Python', src: '/img/cover ebook python.png' },
     { id: 'dasarpemrogramanrust', name: 'Dasar Pemrograman Rust', src: '/img/cover ebook rust.png' },
-  ].filter((d) => d.id !== siteConfig.projectName).sort()
+  ].sort((a, b) => {
+    const sortKey = (o) => String(o.id === siteConfig.projectName ? -1 : 1) + o.name
+    const sortOrder = (sortKey(a)).localeCompare(sortKey(b))
+    return sortOrder
+  })
 
   return <>
     <div className='ebook-wrapper'>
-      <h3>Ebook/web-book kami lainnya:</h3>
-      {ebooks.map((img) => (<a href={`https://${img.id}.novalagung.com/`} target='_blank' className='ebook'>
-        <img className='ebook-img' src={img.src} />
-        <span className='ebook-title'>Ebook: {img.name}</span>
-      </a>))}
+      <h3>Serial ebook/webbook <span className='underline'>Dasar Pemrograman</span> lainnya:</h3>
+      {ebooks.map((img) => (
+        <div className={`ebook ${img.id === siteConfig.projectName ? 'ebook-current' : ''}`}>
+          <a href={`https://${img.id}.novalagung.com/`} target='_blank'>
+            <span className='ebook-checkmark'>✅</span>
+            <img className='ebook-img' src={img.src} />
+            <span className='ebook-title'>Ebook: {img.name}</span>
+          </a>
+        </div>
+      ))}
     </div>
   </>
 }
