@@ -45,6 +45,15 @@ function NavbarContentLayout({left, right}) {
         <div style={{ marginTop: '8px', marginRight: '15px' }}>
           <a
             className="github-button"
+            href={`https://github.com/sponsors/${siteConfig.organizationName}`}
+            data-color-scheme="no-preference: light; light: light; dark: dark;"
+            data-icon="octicon-heart"
+            data-size="large"
+            aria-label={`Sponsor @${siteConfig.organizationName} on GitHub`}
+          >Sponsor</a>
+          &nbsp;
+          <a
+            className="github-button"
             href={`https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}`}
             data-icon="octicon-star"
             data-size="large"
