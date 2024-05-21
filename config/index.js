@@ -9,9 +9,10 @@ function buildConfig({
   seoKeywords,
   googleTrackingID,
   facebookAppID,
-  algoliaAppID,
-  algoliaApiKey,
-  algoliaIndexName,
+  algoliaAppID = undefined,
+  algoliaApiKey = undefined,
+  algoliaIndexName = undefined,
+  showContentFooterEbookWrapper = true,
 }) {
   /** @type {import('@docusaurus/types').Config} */
   return ({
@@ -156,8 +157,9 @@ function buildConfig({
         prism: {
           theme: lightCodeTheme,
           darkTheme: darkCodeTheme,
-          additionalLanguages: ['bash', 'rust', 'python', 'toml', 'yaml'],
+          additionalLanguages: ['bash', 'rust', 'python', 'toml', 'yaml', 'log', 'hcl'],
         },
+        showContentFooterEbookWrapper: showContentFooterEbookWrapper,
         algolia: algoliaAppID ? {
           appId: algoliaAppID,
           apiKey: algoliaApiKey,

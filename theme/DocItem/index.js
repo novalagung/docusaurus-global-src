@@ -7,6 +7,8 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 const Ebook = () => {
   const { siteConfig } = useDocusaurusContext();
 
+  console.log('siteConfig', siteConfig.themeConfig.showContentFooterEbookWrapper)
+
   const ebooks = [
     { id: 'dasarpemrogramangolang', name: 'Dasar Pemrograman Golang', src: '/img/cover ebook golang.png',  },
     { id: 'dasarpemrogramanpython', name: 'Dasar Pemrograman Python', src: '/img/cover ebook python.png' },
@@ -21,7 +23,7 @@ const Ebook = () => {
     <div className='ebook-wrapper'>
       <h3>Serial ebook/webbook <span className='underline'>Dasar Pemrograman</span> lainnya:</h3>
       {ebooks.map((img) => (
-        <div className={`ebook ${img.id === siteConfig.projectName ? 'ebook-current' : ''}`}>
+        <div className={`ebook ${img.id === siteConfig.projectName ? 'ebook-current' : ''}`} key={img.id}>
           <a href={`https://${img.id}.novalagung.com/`} target='_blank'>
             <span className='ebook-checkmark'>✅</span>
             <img className='ebook-img' src={img.src} />
@@ -45,7 +47,7 @@ export default function DocItemWrapper(props) {
     <>
       <DocItem {...props} />
       <BrowserOnly>
-        {() => <Ebook />}
+        {() => siteConfig.themeConfig.showContentFooterEbookWrapper ? <Ebook /> : <></>}
       </BrowserOnly>
       <BrowserOnly>
         {() => comments && (
