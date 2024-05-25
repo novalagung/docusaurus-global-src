@@ -13,6 +13,7 @@ function buildConfig({
   algoliaApiKey = undefined,
   algoliaIndexName = undefined,
   showContentFooterEbookWrapper = true,
+  showNavItems = true,
 }) {
   /** @type {import('@docusaurus/types').Config} */
   return ({
@@ -114,7 +115,7 @@ function buildConfig({
             src: `${url}/img/logo_small_dark.png`,
             srcDark: `${url}/img/logo_small_light.png`,
           },
-          items: [
+          items: !showNavItems ? [] : [
             {
               position: 'left',
               label: '📖 Webbook/Ebook',
