@@ -1,6 +1,9 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+//@ts-check
+const imageFetchPriorityRehypePlugin = require('../components/lcp-fetchpriority');
+
 function buildConfig({
   title,
   tagline,
@@ -48,7 +51,8 @@ function buildConfig({
           docs: {
             sidebarPath: require.resolve('./../../sidebars.js'),
             sidebarCollapsible: false,
-            routeBasePath: '/'
+            routeBasePath: '/',
+            rehypePlugins: [imageFetchPriorityRehypePlugin]
           },
           blog: false,
           theme: {
